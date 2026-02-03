@@ -1050,23 +1050,24 @@
     </footer>
 
 <script>
-        // FAQ 열고 닫기 기능
+        // FAQ 열고 닫기 (가장 단순한 버전)
         function toggleFAQ(element) {
-            const faqItem = element.parentElement;
-            faqItem.classList.toggle('active');
+            const faqItem = element.closest('.faq-item'); // 클릭한 요소의 부모를 찾음
+            if (faqItem) {
+                faqItem.classList.toggle('active');
+            }
         }
 
-        // 메뉴 클릭 시 부드럽게 이동하는 기능 (Smooth scroll)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // 스무스 스크롤
+        document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const target = document.querySelector(targetId);
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80, // 헤더 높이만큼 띄워주는 센스
-                        behavior: 'smooth'
-                    });
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
                 }
             });
         });
