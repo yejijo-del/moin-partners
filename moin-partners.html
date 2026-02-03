@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모인 파트너스 - 콘텐츠로 수익을 만드는 가장 쉬운 방법</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0082FF;
+            --primary-dark: #0066CC;
+            --turquoise: #2EC4B6;
+            --gradient: linear-gradient(135deg, #2EC4B6 0%, #0082FF 100%);
+            --dark: #1a1a1a;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-600: #6c757d;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            animation: slideDown 0.6s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo {
+            height: 36px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .cta-button {
+            background: var(--gradient);
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 2rem 4rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(46, 196, 182, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.05); }
+            66% { transform: translate(-20px, 20px) scale(0.95); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--gray-600);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-md);
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid var(--primary);
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            animation: fadeInUp 0.8s ease both;
+        }
+
+        .stat-item:nth-child(1) { animation-delay: 0.1s; }
+        .stat-item:nth-child(2) { animation-delay: 0.2s; }
+        .stat-item:nth-child(3) { animation-delay: 0.3s; }
+        .stat-item:nth-child(4) { animation-delay: 0.4s; }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            background: var(--gray-100);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s;
+            animation: fadeInUp 0.8s ease both;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .feature-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .feature-description {
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .feature-highlight {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b6b;
+            font-weight: 600;
+            color: #c92a2a;
+            font-size: 1.1rem;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Target Audience Section */
+        .target-audience {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .audience-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .audience-card {
+            background: var(--gray-100);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            animation: fadeInUp 0.8s ease both;
+        }
+
+        .audience-card:nth-child(1) { animation-delay: 0.1s; }
+        .audience-card:nth-child(2) { animation-delay: 0.2s; }
+        .audience-card:nth-child(3) { animation-delay: 0.3s; }
+        .audience-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .audience-card:hover {
+            background: white;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
+        }
+
+        .audience-emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .audience-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+        }
+
+        .audience-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* How it Works */
+        .how-it-works {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+
+        .steps-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            align-items: center;
+            animation: fadeInUp 0.8s ease both;
+        }
+
+        .step:nth-child(1) { animation-delay: 0.1s; }
+        .step:nth-child(2) { animation-delay: 0.2s; }
+        .step:nth-child(3) { animation-delay: 0.3s; }
+
+        .step-number {
+            min-width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .step-content {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+        }
+
+        .step-description {
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+
+        /* Business Plus Section */
+        .business-plus {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+        }
+
+        .business-plus .section-badge {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+        }
+
+        .business-plus .section-title {
+            color: white;
+        }
+
+        .business-plus .section-description {
+            color: #ccc;
+        }
+
+        .business-comparison {
+            max-width: 1000px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .comparison-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .comparison-card:hover {
+            border-color: var(--turquoise);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .comparison-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .comparison-reward {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--turquoise);
+            margin-bottom: 1rem;
+        }
+
+        .comparison-features {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .comparison-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .comparison-features li:before {
+            content: '✓';
+            color: var(--turquoise);
+            font-weight: 900;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--gray-100);
+            margin-bottom: 1rem;
+            border-radius: 15px;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease both;
+        }
+
+        .faq-item:nth-child(1) { animation-delay: 0.1s; }
+        .faq-item:nth-child(2) { animation-delay: 0.2s; }
+        .faq-item:nth-child(3) { animation-delay: 0.3s; }
+        .faq-item:nth-child(4) { animation-delay: 0.4s; }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--gray-200);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            padding: 0 2rem 1.5rem;
+            color: var(--gray-600);
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 2rem;
+            background: var(--gradient);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 2rem 2rem;
+            background: var(--dark);
+            color: white;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--turquoise);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .audience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .business-comparison {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <span style="font-size: 1.5rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">모인 파트너스</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">특징</a>
+                <a href="#how-it-works">시작하기</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://tally.so/r/w8K9Ak" class="cta-button">모인 파트너스 신청</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">🚀 모인 파트너스 모집 중</span>
+            <h1>콘텐츠로 수익을 만드는<br>가장 쉬운 방법</h1>
+            <p>해외송금이 필요한 사람에게 모인을 소개하고, 첫 송금 완료 시 리워드를 받아보세요!</p>
+            <div class="hero-buttons">
+                <a href="https://tally.so/r/w8K9Ak" class="btn-primary">모인 파트너스 신청</a>
+                <a href="https://tally.so/r/nGZaqL" class="btn-secondary">모인 비즈플러스 파트너스 신청</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">10,000원</div>
+                <div class="stat-label">신규 고객 1명당 리워드</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">3,000원</div>
+                <div class="stat-label">신규 고객 할인 쿠폰 혜택</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">매월 10일</div>
+                <div class="stat-label">정기 정산일</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">실시간</div>
+                <div class="stat-label">성과 트래킹 대시보드 확인 가능</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <span class="section-badge">WHY MOIN PARTNERS</span>
+            <h2 class="section-title">왜 모인 파트너스인가요?</h2>
+            <p class="section-description">간편 신청부터 투명한 정산까지, 파트너스의 성공을 위한 모든 것을 지원합니다.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3 class="feature-title">타사 대비 높은 리워드 보장</h3>
+                <p class="feature-description">유입된 고객이 첫 송금을 완료하면 건당 리워드가 발생합니다.<br>모인 파트너스 1만 원, 모인 비즈플러스 파트너스는 2만 원의 수익💸</p>
+                <div class="feature-highlight">10건만 성공하면 월 10만원 고정 수익!</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title">명확한 타겟</h3>
+                <p class="feature-description">유학생, 워홀러, 해외 거주자, 이민 준비자 등 해외송금 니즈가 확실한 사용자에게 특히 높은 전환 성과를 보이고 있습니다.</p>
+                <div class="feature-highlight">높은 전환율 = 더 많은 리워드</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">투명한 성과 관리</h3>
+                <p class="feature-description">파트너스 전용 대시보드를 통해 실시간으로 쿠폰 사용량을 확인하고 예상 정산 금액을 조회할 수 있습니다.</p>
+                <div class="feature-highlight">매월 10일 정기 정산</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="target-audience">
+        <div class="section-header">
+            <span class="section-badge">TARGET AUDIENCE</span>
+            <h2 class="section-title">이런 분들께 추천합니다</h2>
+            <p class="section-description">쿠폰 배포 만으로 수익 구조를 만들 수 있어요.</p>
+        </div>
+        <div class="audience-grid">
+            <div class="audience-card">
+                <div class="audience-emoji">🌏</div>
+                <h3 class="audience-title">해외 한인 부동산, 유학원</h3>
+                <p class="audience-description">워홀러, 주재원, 유학생, 해외 취업자 등<br>정기적인 송금 니즈를 가진 고객층을 보유하고 있는 업체</p>
+            </div>
+            <div class="audience-card">
+                <div class="audience-emoji">🎓</div>
+                <h3 class="audience-title">유학생·교환학생</h3>
+                <p class="audience-description">생활비·학비 송금 니즈가 있는<br>친구, 후배, 학부모님께 실사용 기반 추천 가능</p>
+            </div>
+            <div class="audience-card">
+                <div class="audience-emoji">✈️</div>
+                <h3 class="audience-title">이민·워킹홀리데이 준비자</h3>
+                <p class="audience-description">직접 사용한 뒤, 현지 지인·커뮤니티에 자연스럽게 추천 가능</p>
+            </div>
+            <div class="audience-card">
+                <div class="audience-emoji">✍️</div>
+                <h3 class="audience-title">개인 블로거·SNS 운영자</h3>
+                <p class="audience-description">애드센스 말고 확실한 수익원을 만들고 싶은 SNS 운영자</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-header">
+            <span class="section-badge">HOW IT WORKS</span>
+            <h2 class="section-title">모인 파트너스 시작하기</h2>
+            <p class="section-description">3단계로 간단하게 시작하고, 수익을 만들어보세요.</p>
+        </div>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3 class="step-title">신청서 작성 및 협업 계약 확정</h3>
+                    <p class="step-description">간단한 신청서를 작성하고 제출하세요. 협업 계약서 작성 후 전용 제휴 링크와 할인 쿠폰을 발급받으실 수 있습니다.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3 class="step-title">콘텐츠에 자연스럽게 쿠폰 삽입</h3>
+                    <p class="step-description">블로그, 유튜브, SNS 등 본인의 콘텐츠에 전용 쿠폰 코드를 자연스럽게 삽입하세요. 마케팅 소재와 가이드를 지원해드립니다.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3 class="step-title">매달 리워드 정산 받기</h3>
+                    <p class="step-description">유입된 고객이 첫 송금을 완료하면 자동으로 성과가 집계됩니다. 매월 10일 정기 정산됩니다!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Plus Section -->
+    <section class="business-plus">
+        <div class="section-header">
+            <span class="section-badge">HIGH REWARD PROGRAM</span>
+            <h2 class="section-title">모인 비즈플러스 파트너스</h2>
+            <p class="section-description">사업자 대상 해외송금 서비스 전용 파트너스로, 더 높은 리워드를 받아보세요.</p>
+        </div>
+        <div class="business-comparison">
+            <div class="comparison-card">
+                <h3 class="comparison-title">모인 파트너스</h3>
+                <div class="comparison-reward">10,000원</div>
+                <p style="color: #aaa; font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1rem;">첫 송금 완료 시</p>
+                <p>개인 고객 대상</p>
+                <ul class="comparison-features">
+                    <li>신규 고객 3,000원 할인 쿠폰</li>
+                    <li>건당 10,000원 리워드</li>
+                    <li>개인·해외 거주자 등을 타겟으로 한 콘텐츠 발행</li>
+                    <li>매월 10일 정산</li>
+                </ul>
+                <a href="https://tally.so/r/w8K9Ak" class="btn-white" style="margin-top: 2rem; display: inline-block;">모인 파트너스 신청</a>
+            </div>
+            <div class="comparison-card" style="border-color: #FFD700;">
+                <h3 class="comparison-title">모인 비즈플러스 파트너스</h3>
+                <div class="comparison-reward" style="color: #FFD700;">20,000원</div>
+                <p style="color: #aaa; font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1rem;">첫 송금 완료 시</p>
+                <p>사업자 고객 대상</p>
+                <ul class="comparison-features">
+                    <li>신규 고객 5,000원 할인 쿠폰</li>
+                    <li>건당 20,000원 리워드 (2배!)</li>
+                    <li>개인·개인사업자·법인 고객 타겟으로 한 콘텐츠 발행</li>
+                    <li>매월 10일 정산</li>
+                </ul>
+                <a href="https://tally.so/r/nGZaqL" class="btn-white" style="margin-top: 2rem; display: inline-block; background: #FFD700; color: #1a1a1a;">모인 비즈플러스 파트너스 신청</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-header">
+            <span class="section-badge">FAQ</span>
+            <h2 class="section-title">자주 묻는 질문</h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>파트너스 프로그램은 누구나 신청할 수 있나요?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    네, 개인 크리에이터, 인플루언서, 커뮤니티 운영자, 단체, 사업자 모두 신청 가능합니다. 특히 해외 생활, 유학, 경제·금융 관련 콘텐츠를 다루시는 분들에게 적합합니다.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>리워드는 언제, 어떻게 받나요?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    유입된 신규 고객이 첫 송금을 완료하면 성과로 인정되며, 내부 기준에 따라 매월 10일에 정산 금액을 지급해드립니다. 파트너스 대시보드에서 실시간으로 예상 정산 금액을 확인하실 수 있습니다.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>쿠폰 코드는 어떻게 사용하나요?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    파트너스 협업 계약서 작성 후, 전용 할인 쿠폰 코드를 발급받으실 수 있습니다. 이 쿠폰 코드를 본인의 콘텐츠(블로그, SNS, 유튜브 등)에 자주 노출하고 배포하실수록 더 많은 신규 고객이 유입됩니다. 쿠폰 사용량이 늘어날수록 리워드도 함께 증가하니, 꾸준히 콘텐츠를 통해 모인을 소개해주세요!
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>모인 쿠폰 코드 등록은 어떻게 하나요?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    모인 앱 또는 웹사이트에서 쿠폰 코드를 입력하실 수 있습니다. 자세한 등록 방법은 <a href="https://themoin-op.notion.site/0dc7cc0e143349259800f02f3f5abcca?source=copy_link" target="_blank" style="color: var(--primary); text-decoration: underline;">여기</a>를 참고해주세요.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>모인과 모인 비즈플러스의 차이는 무엇인가요?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    모인은 개인 고객 대상 해외송금 서비스로 건당 1만 원 리워드, 모인 비즈플러스는 개인·개인사업자·법인 대상 서비스로 건당 2만 원 리워드를 제공합니다. 타겟층에 맞게 선택하시면 됩니다.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>트래픽이 많지 않아도 수익이 날까요?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    가능합니다. 모인 파트너스는 클릭 수가 아니라 '첫 송금 완료' 기준으로 리워드가 발생합니다. 소수 유입이라도 전환이 나면 수익이 만들어집니다.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>지금 바로 파트너스가 되어<br>콘텐츠 수익을 만들어 보세요</h2>
+            <p>간단 신청으로 시작하고, 매월 안정적인 수익을 만들 수 있습니다.</p>
+            <div class="cta-buttons">
+                <a href="https://tally.so/r/w8K9Ak" class="btn-white">모인 파트너스 신청</a>
+                <a href="https://tally.so/r/nGZaqL" class="btn-white">모인 비즈플러스 파트너스 신청</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <p class="footer-description">모인 파트너스는 성과형 제휴 프로그램입니다. 운영 정책에 따라 기준이 변경될 수 있습니다.</p>
+                <p class="footer-description" style="margin-top: 1rem;">문의: <a href="/cdn-cgi/l/email-protection#c9aebba6bebda189bda1aca4a6a0a7e7aaa6a4" style="color: var(--turquoise); text-decoration: none;"><span class="__cf_email__" data-cfemail="5037223f272438102438353d3f393e7e333f3d">[email&#160;protected]</span></a></p>
+            </div>
+            <div>
+                <h4 class="footer-title">바로가기</h4>
+                <ul class="footer-links">
+                    <li><a href="#features">프로그램 특징</a></li>
+                    <li><a href="#how-it-works">시작하기</a></li>
+                    <li><a href="#faq">자주 묻는 질문</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">파트너스 신청</h4>
+                <ul class="footer-links">
+                    <li><a href="https://tally.so/r/w8K9Ak">모인 파트너스</a></li>
+                    <li><a href="https://tally.so/r/nGZaqL">비즈플러스 파트너스</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 주식회사 모인. All rights reserved.
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+               
